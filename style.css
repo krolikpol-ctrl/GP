@@ -1,0 +1,19 @@
+/* === Reset i zmienne === */
+:root {
+  --color-primary: #007bff;
+  --color-accent: #17a2b8;
+  --color-highlight: #ffc107;
+  --color-bg: #1e1e2e;
+  --color-text: #e0e0e0;
+  --color-border: #444;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: var(--color-text);
+}
+
+/* TODO: stylowanie karty gracza */
