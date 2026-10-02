@@ -8,6 +8,10 @@
   --color-border: #444;
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -16,4 +20,108 @@ body {
   color: var(--color-text);
 }
 
-/* TODO: stylowanie karty gracza */
+/* === Karta gracza === */
+.player-card {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  border: 3px solid var(--color-primary);
+  background-color: var(--color-bg);
+  transition: transform 0.2s ease;
+}
+
+.player-card:hover {
+  transform: scale(1.01);
+}
+
+/* === Nagłówek === */
+.card-header {
+  padding: 15px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid var(--color-accent);
+  text-align: center;
+}
+
+/* === Sekcje === */
+.card-section {
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+}
+
+.card-section:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+}
+
+.card-section h2 {
+  margin-bottom: 10px;
+  color: var(--color-accent);
+}
+
+/* === Warianty sekcji === */
+.bio {
+  border-left: 4px solid #28a745;
+}
+
+.equipment {
+  border-left: 4px solid #fd7e14;
+}
+
+.achievements {
+  border-left: 4px solid #6f42c1;
+}
+
+/* === Listy === */
+.card-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.card-section li {
+  padding: 5px 0;
+  border-bottom: 1px dashed var(--color-border);
+}
+
+.card-section li:last-child {
+  border-bottom: none;
+}
+
+.card-section li:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding-left: 5px;
+}
+
+/* === Highlight === */
+.highlight {
+  color: var(--color-highlight);
+  font-weight: bold;
+}
+
+/* === Stopka === */
+.card-footer {
+  padding: 10px;
+  margin-top: 15px;
+  border-top: 2px solid var(--color-accent);
+  text-align: center;
+  font-size: 0.85em;
+}
+
+/* === Details === */
+.achievements details {
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px dashed var(--color-border);
+  border-radius: 5px;
+}
+
+.achievements summary {
+  cursor: pointer;
+  color: var(--color-accent);
+  font-weight: bold;
+}
+
+.achievements summary:hover {
+  color: var(--color-highlight);
+}
